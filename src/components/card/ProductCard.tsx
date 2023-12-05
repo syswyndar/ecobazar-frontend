@@ -1,14 +1,14 @@
 import { useState } from "react"
 
-export const ProductCard = () => {
+export const ProductCard = (param: any) => {
     const [isSale, setIsSale] = useState(true);
     return (
         <>
         <div className="relative p-5 border border-gray-200 hover:border-green-500 hover:text-green-600 hover:cursor-pointer">
-            <img className="xs:h-[8rem] sm:h-[15rem]" src="/product-img.png" alt="" />
+            <img className="w-full" src="/product-img.png" alt="" />
             <div className="my-2 flex justify-between items-center">
                 <div>
-                    <h3 className="">Chinese Cabbage</h3>
+                    <h3 className="xs:mb-2 xs:text-[14px]">{param?.name}</h3>
                     <p className="font-semibold text-black">$2.00</p>
                 </div>
                 <div className="bg-gray-200 hover:bg-green-600 p-3 rounded-full stroke-black hover:stroke-white">

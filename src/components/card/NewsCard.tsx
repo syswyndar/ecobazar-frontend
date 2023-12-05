@@ -3,8 +3,7 @@ export const NewsCard = () => {
         <>
         <div className="mx-auto text-center border border-gray-200 rounded-lg shadow-lg hover:cursor-pointer">
             <div className="relative">
-                {/* <span className="absolute bottom-2 left-2"><span>21</span></span> */}
-                <div className="absolute bottom-3 left-3 bg-white rounded-lg h-[50px] w-[50px] text-[12px] flex flex-col items-center justify-center">
+                <div className="absolute bottom-3 left-3 bg-white rounded-lg h-[50px] w-[50px] text-[12px] font-medium flex flex-col items-center justify-center">
                     <p>21</p>
                     <p>Dec</p>
                 </div>

@@ -2,6 +2,7 @@ import { CategoryCard } from "../components/card/CategoryCard"
 import { NewsCard } from "../components/card/NewsCard"
 import { ProductCard } from "../components/card/ProductCard"
 import { categories } from "../fakeapi/Categories"
+import { products } from "../fakeapi/Products"
 
 export const Home = () => {
     const featureItems = [
@@ -59,7 +60,13 @@ export const Home = () => {
         <div className="container mx-auto xs:my-10 md:my-20">
             <div className="flex justify-between items-center">
                 <h1 className="xs:text-[1.3rem] sm:text-[2rem] font-semibold">Popular Categories</h1>
-                <a href="#" className="text-green-600 hover:text-green-400">View All</a>
+                <a href="" className="flex items-center gap-3 stroke-green-600 text-green-600 font-bold hover:text-green-500 hover:stroke-green-500">
+                    <span>View All</span>
+                    <svg width="16" height="13" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 7.50049H1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.94995 1.47559L16 7.49959L9.94995 13.5246" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
             <div className="grid xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 my-5">
                 {categories.map((item) => {
@@ -70,24 +77,30 @@ export const Home = () => {
             </div>
         </div>
         <div className="container mx-auto">
-            <img src="/Discount-Bannar.png" alt="discount-banner" />
+            <img className="" src="/Discount-Bannar.png" alt="discount-banner" />
         </div>
         <div className="container mx-auto xs:my-10 md:my-20">
             <div className="flex justify-between items-center">
                 <h1 className="xs:text-[1.3rem] sm:text-[2rem] font-semibold">Popular Products</h1>
-                <a href="#" className="text-green-600 hover:text-green-400">View All</a>
+                <a href="" className="flex items-center gap-3 stroke-green-600 text-green-600 font-bold hover:text-green-500 hover:stroke-green-500">
+                    <span>View All</span>
+                    <svg width="16" height="13" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 7.50049H1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.94995 1.47559L16 7.49959L9.94995 13.5246" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
-            <div className="grid xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 my-5">
-                {categories.map((item) => {
+            <div className="grid xs:grid-cols-1 xs:gap-3 md:gap-0 sm:grid-cols-3 lg:grid-cols-5 my-5">
+                {products.map((item) => {
                     return (
-                        <ProductCard/>
+                        <ProductCard name={item.name}/>
                     )
                 })}
             </div>
         </div>
         <div className="container text-center mx-auto xs:my-10 md:my-20">
             <h1 className="xs:text-[1.3rem] sm:text-[2rem] font-semibold">Latest News</h1>
-            <div className="grid xs:grid-cols-2 sm:grid-cols-4 my-5 gap-10">
+            <div className="grid xs:grid-cols-1 sm:grid-cols-4 my-5 gap-10">
                 <NewsCard/>
                 <NewsCard/>
                 <NewsCard/>
