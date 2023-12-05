@@ -1,4 +1,5 @@
 import { CategoryCard } from "../components/card/CategoryCard"
+import { NewsCard } from "../components/card/NewsCard"
 import { ProductCard } from "../components/card/ProductCard"
 import { categories } from "../fakeapi/Categories"
 
@@ -28,7 +29,7 @@ export const Home = () => {
 
     return (
         <>
-        <div className="container mx-auto p-5 grid xs:grid-cols-1 md:grid-cols-2 mb-5">
+        <div className="container mx-auto p-5 grid xs:grid-cols-1 md:grid-cols-2">
             <div className="xs:mb-6 sm:mb-0">
                 <img src="/Home_Img.png" alt="home-img" />
             </div>
@@ -42,7 +43,7 @@ export const Home = () => {
                 </button>
             </div>
         </div>
-        <div className="container grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 shadow-lg xs:my-10 md:my-20 mx-auto rounded-md">
+        <div className="container grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 shadow-lg xs:my-10 md:my-16 mx-auto rounded-md">
             {featureItems.map((item) => {
                 return (
                     <div className="flex gap-5 items-center mx-auto p-8">
@@ -82,6 +83,15 @@ export const Home = () => {
                         <ProductCard/>
                     )
                 })}
+            </div>
+        </div>
+        <div className="container text-center mx-auto xs:my-10 md:my-20">
+            <h1 className="xs:text-[1.3rem] sm:text-[2rem] font-semibold">Latest News</h1>
+            <div className="grid xs:grid-cols-2 sm:grid-cols-4 my-5 gap-10">
+                <NewsCard/>
+                <NewsCard/>
+                <NewsCard/>
+                <NewsCard/>
             </div>
         </div>
         </>

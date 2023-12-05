@@ -23,28 +23,4 @@ export const categories = [
         id: 6,
         title: "Fresh Fruit"
     },
-    {
-        id: 7,
-        title: "Fresh Fruit"
-    },
-    {
-        id: 8,
-        title: "Fresh Fruit"
-    },
-    {
-        id: 9,
-        title: "Fresh Fruit"
-    },
-    {
-        id: 10,
-        title: "Fresh Fruit"
-    },
-    {
-        id: 11,
-        title: "Fresh Fruit"
-    },
-    {
-        id: 12,
-        title: "Fresh Fruit"
-    }
 ]
